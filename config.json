@@ -1,0 +1,47 @@
+{
+    "hybrid": {
+        "namespace": "hybrid-bar",
+        "position": "bottom",
+        "font": "Hack Nerd Font",
+        "r": 25,
+        "g": 25,
+        "b": 25,
+        "a": 0.9
+    },
+
+     "right-label_title": {
+        "command": "hyprctl activeworkspace -j | jq '.id'",
+        "text": "  "
+    },
+    
+    "right-label_clock": {
+        "command": "date +%R",
+        "text": "  ",
+        "update_rate": 5000
+    },
+
+    "right-label_date": {
+        "command": "date +%x  ",
+        "text": " 󰸘 ",
+        "update_rate": 5000
+    },
+
+    "right-label_updates": {
+        "command": "pacman -Qu | wc -l",
+        "text": "  ",
+        "update_rate": 100        
+    },
+    
+    "right-label_user": {
+        "command": "whoami",
+        "text": "  ",
+        "update_rate": 5000        
+    },
+
+    "left-label_title": {
+        "text": "  ",
+        "command": "hyprctl activewindow | grep 'title:' | cut -c 9-200",
+        "tooltip": "hyprctl activewindow | grep 'title:' | cut -c 9-200"
+    }
+  
+}
